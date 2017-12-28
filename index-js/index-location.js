@@ -4,10 +4,10 @@
 var baiduApi =
     "http://api.map.baidu.com/geocoder/v2/?address=${address}&output=json&ak=WOgrMM000YaDyHaB0LniT0tj&callback=?";
 // var googleApi = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=${address}";
-
+var city='';
 function check() {
-    var city = $('#inputcity').val();
-    console.log(city);
+    city = $('#inputcity').val();
+    // console.log(city);
     baiduApi = baiduApi.replace("${address}", city);
     // googleApi = googleApi.replace("${address}", city);
     $.ajax({
@@ -33,10 +33,11 @@ function erryFunction() {
     $('#waring').css('display', 'block');
 }
 
-function succFunction(tt) {
-    var json = eval(tt); //数组
+function succFunction(data) {
+    var json = eval(data); //数组
     var location = json.result.location;
-    console.log(json.result.location);
-    var pointStr = "经度(lng)：" + location.lng + "<br /><br />纬度(lat)：" + location.lat;
+    // console.log(json.result.location);
+    var pointStr = "经度(lng)：" + location.lng + "<br />纬度(lat)：" + location.lat+"<br />'"
+    +city+"': ["+location.lng+","+location.lat+"],";
     $("#info").html(pointStr);
 }
