@@ -130,7 +130,7 @@ var series = [];
 option = {
     backgroundColor: '#404a59',
     title: {
-        text: '1994~2017年',
+        text: '着点',
         textStyle: {
             color: '#fff',
             fontSize: 20
