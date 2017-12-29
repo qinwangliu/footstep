@@ -130,7 +130,7 @@ var series = [];
 option = {
     backgroundColor: '#404a59',
     title: {
-        text: '着点',
+        text: '坐标',
         textStyle: {
             color: '#fff',
             fontSize: 20
