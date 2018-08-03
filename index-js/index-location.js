@@ -3,7 +3,7 @@
  */
 var baiduApi =
     "http://api.map.baidu.com/geocoder/v2/?address=${address}&output=json&ak=WOgrMM000YaDyHaB0LniT0tj&callback=?";
-// var googleApi = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=${address}";
+// var googleApi = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=${address}"; 
 var city='';
 function check() {
     city = $('#inputcity').val();
